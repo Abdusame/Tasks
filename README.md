@@ -1,1 +1,1 @@
-Tasks from leetcode.com that I solved.
+Tasks that I solved.
