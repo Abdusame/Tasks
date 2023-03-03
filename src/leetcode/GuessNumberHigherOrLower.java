@@ -16,16 +16,28 @@ public class GuessNumberHigherOrLower /*extends GuessGame*/ {
         int index;
         int result;
         while (true) {
-            index = n/2 + start - 1;
+            if (guess(start) == 0) {
+                index = start;
+                break;
+            }
+            if (guess(end) == 0) {
+                index = end;
+                break;
+            }
+            index = (end - start)/2 + start;
             result = guess(index);
             if (result == -1) {
-
+                end = index;
             } else if (result == 1) {
-
+                start = index;
             } else if (result == 0) {
                 break;
             }
         }
         return index;
+    }
+
+    private int guess(int num) {
+        return 0;
     }
 }
